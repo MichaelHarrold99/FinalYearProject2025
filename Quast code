@@ -1,0 +1,7 @@
+#!/bin/bash
+# Run QUAST on each assembly in the assemblies/ directory
+mkdir -p quast_results
+for assembly in assemblies/*.fna; do
+  base=$(basename "$assembly" .fna)
+  quast.py "$assembly" -o quast_results/"$base"
+done
