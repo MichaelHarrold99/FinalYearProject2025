@@ -1,0 +1,7 @@
+#!/usr/bin/awk -f
+# Convert TBLASTN output to a multi-FASTA format.
+BEGIN { FS="\t"; OFS="\n" }
+{
+  print ">" $1 "_" NR;
+  print $NF;
+}
