@@ -1,0 +1,10 @@
+#!/bin/bash
+# Merge VCF files from Parsnp outputs and convert to multi-FASTA.
+# Merge VCF files using bcftools.
+bcftools merge $vcf_files -o merged.vcf
+# Compress and index the merged VCF.
+bgzip merged.vcf
+tabix -p vcf merged.vcf.gz
+
+# Convert the merged VCF to multi-FASTA using vcf2phylip.
+vcf2phylip.py -i merged.vcf.gz -o alignment.vcf
