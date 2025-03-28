@@ -1,0 +1,3 @@
+#!/bin/bash
+# Align the MutS sequences using MUSCLE.
+muscle -in mutS_sequences.faa -out aligned_mutS.faa
