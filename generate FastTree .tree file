@@ -1,0 +1,3 @@
+#!/bin/bash
+# Build a phylogenetic tree from the variable SNP alignment.
+FastTree -nt -gtr -gamma all_assemblies_snp.fasta > all_assemblies.tree
