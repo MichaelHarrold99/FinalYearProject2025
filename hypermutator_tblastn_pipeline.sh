@@ -1,3 +1,16 @@
+Description:
+#   This script is part of my final-year bioinformatics project investigating
+#   potential hypermutator genes across multiple bacterial genomes. It uses the
+#   NCBI Datasets CLI to download genomic data from a specified BioProject, merges
+#   all the genome FASTA files, creates a BLAST database, and runs TBLASTN queries
+#   for selected protein sequences.
+#
+# Usage:
+#   1. Make sure both the NCBI Datasets CLI and BLAST+ tools (makeblastdb, tblastn) 
+#      are installed and available in your PATH.
+#   2. Place your query protein files in the directory specified by QUERY_DIR.
+#   3. Update the variables (e.g., BIOPROJECT, QUERY_PROTEINS) if needed.
+#   4. Run this script in a Unix-based shell (e.g., ./hypermutator_tblastn_pipeline.sh).
 #!/bin/bash
 BIOPROJECT="PRJNA325248"
 COMBINED_FASTA="combined_genomes.fna"
