@@ -1,0 +1,8 @@
+#!/bin/bash
+# Run Parsnp on batches of assemblies.
+# Assume assemblies are organized in directories (e.g., batch1, batch2, …)
+mkdir -p parsnp_output
+for batch in batch*/; do
+  batch_name=$(basename "$batch")
+  parsnp -r PAO1_reference.fna -d "$batch" -o parsnp_output/"$batch_name" -c
+done
