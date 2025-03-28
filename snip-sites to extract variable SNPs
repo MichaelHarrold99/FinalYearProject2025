@@ -1,0 +1,3 @@
+#!/bin/bash
+# Use snp-sites to extract variable SNP sites from the alignment.
+snp-sites -c -o variable_snps.fasta alignment.phy
